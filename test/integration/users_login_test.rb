@@ -17,7 +17,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path
     assert_select "a[href=?]", user_path(@user)
   end
-  
+
 	test "login with invalid information" do 
 		get login_path
 		assert_template 'sessions/new'
